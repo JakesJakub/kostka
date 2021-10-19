@@ -78,16 +78,3 @@ basic.showLeds(`
         # . . . #
         # . . . #
 `)
-function lock() {
-    if (input.buttonIsPressed(Button.A)) {
-        basic.showLeds(`
-        . . # . .
-        . # . # .
-        # # # # #
-        # . . . #
-        # . . . #
-        `)
-    }
-    
-}
-
