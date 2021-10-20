@@ -1,13 +1,17 @@
+let x = 1
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
-    tlacitko()
+    button()
 })
-function tlacitko() {
+function button() {
     input.onGesture(Gesture.Shake, function on_gesture_shake() {
         shake()
     })
+}
+
+if (x == 1) {
     function shake() {
-        let x = randint(1, 6)
-        if (x == 1) {
+        let y = randint(1, 6)
+        if (y == 1) {
             basic.showLeds(`
                 . . . . .
                 . . . . .
@@ -17,7 +21,7 @@ function tlacitko() {
             `)
         }
         
-        if (x == 2) {
+        if (y == 2) {
             basic.showLeds(`
                 . . . . #
                 . . . . .
@@ -27,7 +31,7 @@ function tlacitko() {
             `)
         }
         
-        if (x == 3) {
+        if (y == 3) {
             basic.showLeds(`
                 # . . . .
                 . . . . .
@@ -37,7 +41,7 @@ function tlacitko() {
             `)
         }
         
-        if (x == 4) {
+        if (y == 4) {
             basic.showLeds(`
                 # . . . #
                 . . . . .
@@ -47,7 +51,7 @@ function tlacitko() {
             `)
         }
         
-        if (x == 5) {
+        if (y == 5) {
             basic.showLeds(`
                 # . . . #
                 . . . . .
@@ -57,7 +61,7 @@ function tlacitko() {
             `)
         }
         
-        if (x == 6) {
+        if (y == 6) {
             basic.showLeds(`
                 # . . . #
                 . . . . .
@@ -67,6 +71,50 @@ function tlacitko() {
             `)
         }
         
+        if (y == 7) {
+            basic.showLeds(`
+            # . . . #
+            . . . . .
+            # . # . #
+            . . . . .
+            # . . . #
+            `)
+        }
+        
+        if (y == 8) {
+            basic.showLeds(`
+            # . # . #
+            . . . . .
+            # . . . #
+            . . . . .
+            # . # . #
+            `)
+        }
+        
+        if (y == 9) {
+            basic.showLeds(`
+            # . # . #
+            . . . . .
+            # . # . #
+            . . . . .
+            # . # . #
+            `)
+        }
+        
+        if (y == 10) {
+            basic.showLeds(`
+            # . . . #
+            . # . # .
+            # . . . #
+            . # . # .
+            # . . . #
+            `)
+        }
+        
+        for (let i = 0; i < y; i++) {
+            music.playTone(Note.A, music.beat(2))
+            music.rest(music.beat(2))
+        }
     }
     
 }
